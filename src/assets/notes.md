@@ -21,4 +21,4 @@ npm i xlsx@0.18.5
 configuracion de visual code 
 https://www.youtube.com/watch?v=3gAq62EKkv8
 
-43:09 07 video
+09 video
