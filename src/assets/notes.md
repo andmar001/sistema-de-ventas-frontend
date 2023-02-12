@@ -22,3 +22,5 @@ configuracion de visual code
 https://www.youtube.com/watch?v=3gAq62EKkv8
 
 09 video
+
+revisar modal editar y eliminar usuario
