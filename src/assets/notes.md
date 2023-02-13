@@ -23,4 +23,7 @@ https://www.youtube.com/watch?v=3gAq62EKkv8
 
 09 video
 
+# revisión de la aplicación
 revisar modal editar y eliminar usuario
+- basarse en el de edicion de productos para editar usuario, ese si jala correctamente
+- revisar por q no cargan las categorias

@@ -75,7 +75,7 @@ export class UsuarioComponent implements OnInit, AfterViewInit {
       disableClose: true, // no se puede cerrar haciendo click fuera del modal
       data: usuario       // datos que se envian al modal
     }).afterClosed().subscribe( resultado =>{
-      if(resultado == "true"){
+      if(resultado === "true"){
         this.obtenerUsuarios();
       }
     });

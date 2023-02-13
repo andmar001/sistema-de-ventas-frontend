@@ -90,7 +90,7 @@ export class ModalUsuarioComponent implements OnInit {
       this._usuarioServicio.guardar(_usuario).subscribe({
         next: (data) => {
           if(data.status == true){
-            this._utilidadServicio.mostrarAlerta( 'El ususario fue registrado ', 'Exito' );
+            this._utilidadServicio.mostrarAlerta( 'El usuario fue registrado ', 'Exito' );
             this.modalActual.close('true');
           }else{
             this._utilidadServicio.mostrarAlerta( 'No se pudo registrar el usuario', 'Error' );
