@@ -2,7 +2,7 @@ import { DetalleVenta } from "./detalle-venta";
 
 export interface Venta {
     idVenta?: number;
-    numeroDocumento: string;
+    numeroDocumento?: string;
     tipoPago: string;
     fechaRegistro?: string;
     totalTexto: string;
