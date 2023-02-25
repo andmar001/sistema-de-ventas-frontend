@@ -1,1 +1,58 @@
-<p>historial-venta works!</p>
+<h1 style="margin: 20px 0px 0px 40px;">Historial Venta</h1>
+
+<mat-card style="margin: 20px 40px 40px 40px;">
+
+  <mat-card-content>
+
+    <form [formGroup]="formularioBusqueda" (ngSubmit)="buscarVentas()">
+
+      <div class="campos-formulario">
+
+        <mat-form-field appearance="fill">
+            <mat-label>Buscar Por</mat-label>
+            <mat-select formControlName="buscarPor">
+              <mat-option *ngFor="let item of opcionesBusqueda" [value]="item.value">
+                {{ item.descripcion }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" *ngIf="formularioBusqueda.value.buscarPor == 'numero'">
+            <mat-label>Numero Orden</mat-label>
+            <input matInput autocomplete="off" formControlName="numero">
+            <mat-icon matSuffix>mail</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" *ngIf="formularioBusqueda.value.buscarPor == 'fecha'">
+            <mat-label>Fecha Inicio</mat-label>
+            <input matInput autocomplete="off" formControlName="fechaInicio" [matDatepicker]="picker1">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" *ngIf="formularioBusqueda.value.buscarPor == 'fecha'">
+            <mat-label>Fecha Fin</mat-label>
+            <input matInput autocomplete="off" formControlName="fechaFin" [matDatepicker]="picker2">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+
+          <button mat-raised-button
+                  color="primary"
+                  [disabled]="formularioBusqueda.invalid"
+                  type="submit"
+                  class="boton-buscar">
+            <mat-icon>search</mat-icon> Buscar
+          </button>
+
+      </div>
+
+    </form>
+
+    <mat-divider></mat-divider>
+
+    
+
+  </mat-card-content>
+
+</mat-card>
